@@ -1,0 +1,74 @@
+.footer{
+    background-color:#F7F7F9;
+    
+    width : 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height : 22rem;
+   
+}
+.footer-about,.footer-customer,.footer-join{
+    width : 20%;
+    height : 80%;
+    margin-top: 4rem;
+    /* border : 1px solid black; */
+}
+.footer-about p:nth-child(1), .footer-join p:nth-child(1), .footer-customer p:nth-child(1){
+    font-weight: 400;
+    font-size : 18px;
+    line-height: 15px;
+    letter-spacing: 0.9px;
+}
+.footer-about p:nth-child(2){   
+    margin-top: 2rem;
+    font-weight: 400;
+    font-size : 14px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+}
+.footer-customer p:nth-child(2){
+    margin-top: 1rem;
+    color: #FF9966;
+}
+.footer-customer ul, .footer-about ul{
+    margin-top: 1rem;
+   list-style-type: none;
+}
+.footer-customer ul li, .footer-about ul li{
+    margin-top : 1rem;
+}
+.footer-join p:nth-child(2){
+    margin-top: 1rem;
+}
+.footer-join input{
+    width : 250px;
+    height : 40px;
+    margin-top : 1rem;
+    padding-left: 0.5rem;
+    border-radius: 0;
+    border: 1px solid grey;
+}
+.footer-join button{
+    width: 150px;
+    height: 40px;
+    margin-top: 1rem;
+    background-color: #FF9966;
+    color: white;
+    border-radius: 0;
+    border: none;
+}
+.social-media{
+    margin-top : 1rem;
+    width : 40%;
+    display: flex;
+    justify-content: space-between;
+}
+.trademark{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height : 40px;
+    background-color: #EFEFF0;
+    
+}
