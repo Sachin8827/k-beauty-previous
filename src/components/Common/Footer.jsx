@@ -1,4 +1,7 @@
 import '../../assets/Css/Footer.css'
+import insta from '../../assets/images/instagram.svg'
+import fb from '../../assets/images/facebook.svg'
+import youtube from '../../assets/images/youtube.svg'
 function Footer(){
     return<>
     <div className='footer'>
@@ -10,9 +13,9 @@ function Footer(){
             </p>
 
             <div className='social-media'>
-              <i className='fa-brands fa-facebook-f'></i>
-              <i className='fa-brands fa-instagram'></i>
-              <i className='fa-brands fa-youtube'></i>
+              <img src={insta}/>
+              <img src={fb}/>
+              <img src={youtube}/>
             </div>
           </div>
           <div className='footer-customer'>

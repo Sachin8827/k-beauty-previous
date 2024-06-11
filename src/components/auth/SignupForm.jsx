@@ -10,6 +10,7 @@ import {
   validateAddress,
 } from "../../Validations/Validations";
 import { useNavigate } from "react-router-dom";
+import ProgressBar from "../Common/ProgressBar";
 
 function SignupForm({ currentPage, setCurrentPage, FormTitle }) {
   const navigate = useNavigate();
@@ -46,43 +47,7 @@ function SignupForm({ currentPage, setCurrentPage, FormTitle }) {
   return (
     <>
       <div className='signup-form' style={{ maxWidth: 500 }}>
-        <div className='progress-bar'>
-          {FormTitle.map((item, index) => (
-            <div
-              style={{ display: "inline-block", marginLeft: "0.8rem" }}
-              key={index}
-            >
-              <div
-                className='round'
-                style={{
-                  backgroundColor: currentPage <= index ? "white" : "#FF9966",
-                }}
-              >
-                {currentPage <= index ? (
-                  index + 1
-                ) : (
-                  <i
-                    className='fa-solid fa-check'
-                    style={{ color: currentPage <= index ? "black" : "white" }}
-                  ></i>
-                )}
-              </div>
-              {index <= 2 ? (
-                <div
-                  className='line'
-                  style={{
-                    border:
-                      currentPage > index
-                        ? "1px solid #FF9966"
-                        : "1px solid white",
-                  }}
-                ></div>
-              ) : (
-                ""
-              )}
-            </div>
-          ))}
-        </div>
+        <ProgressBar FormTitle={FormTitle} currentPage={currentPage} />
         <Formik
           validateOnChange={true}
           validateOnBlur={true}
@@ -120,7 +85,7 @@ function SignupForm({ currentPage, setCurrentPage, FormTitle }) {
                 users.push(values);
                 localStorage.setItem("users", JSON.stringify(users));
                 alert("signIn");
-                navigate('/login'); 
+                navigate("/login");
               }
             } else {
               setCurrentPage((currPage) => currPage + 1);
@@ -154,8 +119,8 @@ function SignupForm({ currentPage, setCurrentPage, FormTitle }) {
             </Form>
           )}
         </Formik>
-        <div className='log' style={{ marginTop: "1rem", cursor: "pointer" }}>
-          already a user ? <a onClick={() => navigate("/login")}>Login</a>
+        <div className='log' style={{ marginTop: "1.5rem", cursor: "pointer", letterSpacing : '0.7px'}}>
+          already a user ? <a onClick={() => navigate("/login")} style={{textDecoration : "underline"}}>Login</a>
         </div>
       </div>
     </>

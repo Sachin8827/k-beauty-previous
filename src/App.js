@@ -24,10 +24,12 @@ function App() {
       <Heading />
       <Header />
       <Routes>
-        <Route path='/' element={<ProtectedRoute isLoggedIn={isLoggedIn}><HomePage /></ProtectedRoute>} />
+        {/* <Route path='/' element={<ProtectedRoute isLoggedIn={isLoggedIn}><HomePage /></ProtectedRoute>} /> */}
         <Route path='/signup' element={<PublicRoute isLoggedIn={isLoggedIn}><Signup /></PublicRoute>} />
         <Route path='/login' element={<PublicRoute isLoggedIn={isLoggedIn}><Login setLoggedIn={setLoggedIn} /></PublicRoute>} />
-        <Route path="/productdetail/:id" element={<ProtectedRoute isLoggedIn={isLoggedIn}><ProductPage/></ProtectedRoute>}/>
+        {/* <Route path="/productdetail/:id" element={<ProtectedRoute isLoggedIn={isLoggedIn}><ProductPage/></ProtectedRoute>}/> */}
+        <Route path="/productdetail/:id" element={<ProductPage/>}/>
+        <Route path="/" element={<HomePage />}/>
       </Routes>
       <Footer />
     </>

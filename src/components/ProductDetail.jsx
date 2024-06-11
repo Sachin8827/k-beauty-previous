@@ -11,16 +11,17 @@ import { displayRazorpay } from "../Payment/Payment";
 function ProductDetail({id}) {
 
   let [quantity, setQuantity] = useState(1);
-  const product = data.find((item, index) =>item.id==id)
-
- console.log(product.image)
+  const product = data.find((item, index) =>item.id==id);
   const handleQuantity = (num) => {
-    num
-      ? quantity > 1
-        ? setQuantity(--quantity)
-        : ""
-      : setQuantity(++quantity);
+    if (num) {
+      if (quantity > 1) {
+        setQuantity(quantity - 1);
+      }
+    } else {
+      setQuantity(quantity + 1);
+    }
   };
+  
 
   return (
     <>
@@ -41,20 +42,20 @@ function ProductDetail({id}) {
           </div>
           <div className='details'>
             <p>A'PIEU</p>
-            <p>{product.name}</p>
-            <Rating value={product.star} text='reviews' />
-            <p>$ {product.price}</p>
+            <p>{product?.name}</p>
+            <Rating value={product?.star} text='reviews' />
+            <p>$ {product?.price}</p>
             <div className='quantity'>
               <i
                 className='fa-solid fa-minus'
-                style={{ fontSize: "1.2rem", cursor: "pointer",color: quantity == 1 ? "grey" : "black", }}
+                style={{ fontSize: "1.5rem", cursor: "pointer",color: quantity == 1 ? "grey" : "black", }}
                 onClick={() => handleQuantity(1)}
               ></i>
-              <p style={{ marginTop: "1rem" }}>{quantity}</p>
+              <p style={{ marginTop: "1.5rem" }}>{quantity}</p>
               <i
                 className='fa-solid fa-plus'
                 style={{
-                  fontSize: "1.2rem",
+                  fontSize: "1.5rem",
                   cursor: "pointer",
                   
                 }}
@@ -62,7 +63,7 @@ function ProductDetail({id}) {
               ></i>
             </div>
             <div className='add-to-cart'>
-              <p>ADD TO CART &nbsp;&nbsp; &#9679; &nbsp;&nbsp; {product.price}$</p>
+              <p>ADD TO CART &nbsp;&nbsp; &#9679; &nbsp;&nbsp; {product?.price}$</p>
             </div>
             <div className='buy-now' onClick={displayRazorpay}>
               <p>BUY IT NOW</p>
@@ -81,7 +82,7 @@ function ProductDetail({id}) {
             <div className='override-pink'>Usually ships within 3-5 days</div>
             <div className='product-discription'>
               <p>PRODUCT DETAILS</p>
-              <p>{product.discription}</p>
+              <p>{product?.discription}</p>
               <p>
                 Isntree’s range of broad spectrum sun protection products are
                 lightweight and suitable for daily use. Not only do they help
@@ -102,13 +103,13 @@ function ProductDetail({id}) {
               >
                 Product of Korea.
               </p>
-              <hr />
+              <hr style={{border: "1px solid #E2E2E2"}}/>
               <Accordion accordionData={accordionData} />
             </div>
           </div>
         </div>
       </div>
-      <hr style={{ marginBottom: "1.5rem", color: "#D9D9D9" }} />
+      <hr style={{ marginBottom: "1.5rem",border: "0.1px solid #E2E2E2" }} />
     </>
   );
 }

@@ -1,5 +1,6 @@
 .image{
     width : 100%;
+    height: 86vh;
     position: absolute;
     top : 2rem;
 }
@@ -17,6 +18,7 @@
 }
 .image img{
     width: 100%;
+    height: 100%;
 }
 .text {
     position: absolute;
@@ -32,36 +34,38 @@
 }
 .row{
     width: 100%;
-    margin-top: -54rem;
+    height: auto;
+    display: inline-block;
+    margin-top: 25rem;
     
 }
 .content{
     width: 50%;
     float: left;
-    padding-right: 3rem;
-    padding-left: 3rem;
+    padding-right: 3%;
+    padding-left: 3%;
     background-color:#F7F7F9;
-    height: 430px;
+    height: 26.8rem;
 }
 
 .content p:nth-child(1){
     margin-top: 7rem;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1rem;
     line-height: 15px;
     
 }
 .content p:nth-child(2){
     margin-top: 1.2rem;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 1.2rem;
     line-height: 32px;
     letter-spacing: 1px;
 }
 .content p:nth-child(3){
     margin-top: 1.2rem;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 0.7rem;
     line-height: 18px;
     letter-spacing: 0.25px;
 }
@@ -69,10 +73,12 @@
     width : 50%;
     float : left;
     overflow: hidden;
-    height: 430px;
+    height: 26.8rem;
 }
 .img img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transform: scale(1.2);
 }
 .img2{
@@ -93,20 +99,17 @@
     background-color: #FF9966;
     color: white;
     margin-top: 2rem;
-    
+    /* z-index: 1; */
 }
 .row-products{
-  
-    margin-top: 81rem;
-    padding-top: 56rem;
+    padding-top: 2rem;
     width: 100%;
-   
-    padding-left: 0rem;
+    padding-left: 5%;
 }
 .product{
-    width : 20%;
+    width : 18%;
     float : left;
-    height: 400px;
+    height: 380px;
     margin-left: 3rem;
     margin-top: 2rem;
     cursor: pointer;
@@ -153,7 +156,7 @@
     color: white;
     border: none;
     cursor: pointer;
-    margin-left: 42%;
+    margin-left: 39%;
     margin-bottom: 3rem;
 }
 .testimonials{
@@ -161,18 +164,16 @@
     height: 30rem;
     background-color: #F7F7F9;
     padding-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center ;
 }
 .t-head{
     font-weight : 400;
     font-size : 15px;
+    text-align: center;
 }
 .t-box{
     margin-top: 2rem;
     width: 60%;
-    
+    margin-left: 20%;
     height: 250px;
     display: flex;
     justify-content: space-between;
@@ -216,6 +217,8 @@
     cursor: pointer;
     margin-bottom: 3rem;
     height: 2.5rem;
+    margin-left: 42%;
+    z-index: 1;
 }
 .insta-content{
     width: 100%;
@@ -245,7 +248,7 @@
     margin-top: 2rem;
 }
 .i-product-box{
-    width : 23%;
+    width : 22%;
     height: 230px;
     float : left;
     margin-left: 1rem;
@@ -275,3 +278,639 @@
 .i-product-photo{
     width: 50%;
 }
+@media only screen and (max-width: 768px) {
+    .image{
+        height: 90vh;
+        position: absolute;
+        top : 2rem;
+       
+    }
+    
+    .image::before {
+        content: ""; /* Adds a pseudo-element */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.0001), rgba(0, 0, 0, 0.0001)),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.65) 100%);    
+        z-index: 1; /* Ensures the gradient is behind the image */
+    }
+    .image img{
+        object-fit: cover;
+        height: 100%;
+    }
+    .text {
+        position: absolute;
+        width: 70%;
+        top: 55%;
+        left: 1%;
+        padding: 20px;
+        color: white;
+        z-index: 1;
+    }
+    .text p{
+        margin-top: 1rem;
+    }
+    .text p:nth-child(1){
+        font-size: 0.8rem;
+        font-weight:lighter;
+    }
+    .text p:nth-child(2){
+        font-size: 0.8rem;
+        font-weight: bold
+    }
+    .text p:nth-child(3){
+        font-size: 0.8rem;
+    }
+    .row{
+        width: 100%;
+        margin-top: 27rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        width: 95%;
+        margin-left: 2.5%;
+        height: auto;
+        background-color:#F7F7F9;
+    }
+    .order2{
+        order: 2;
+    }
+    .order4{
+        order: 4;
+    }
+    .content p:nth-child(1){
+        margin-top: 1.5rem;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 15px;
+       
+        
+    }
+    .content p:nth-child(2){
+        font-weight: 400;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        line-height: 32px;
+        letter-spacing: 1px;
+    }
+    .content p:nth-child(3){
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.7px;
+    }
+    .img{
+        width : 95%;
+        overflow: hidden;
+        height: 100%;
+        order: 1;
+        margin-left: 2.5%;
+        /* border: 1px solid red; */
+    }
+    .img img{
+        width: 100%;
+        
+        /* transform: scale(1.2); */
+    }
+    .img2{
+        width : 95%;
+        overflow: hidden;
+        margin-left: 2.5%;
+        order: 3;
+        height: auto;
+    }
+    .img2 img{
+        width: 90%;
+        /* object-fit: cover; */
+        transform: scale(1.2); 
+    }
+    .btn{
+        width: 10rem;
+        height: 2.5rem;
+        border: none;
+        background-color: #FF9966;
+        color: white;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        /* z-index: 1; */
+    }
+    .row-products{
+        padding-top: 3rem;
+        margin-top: 0rem;
+        width: 100%;
+    }
+    .product{
+        width : 35%;
+        float : left;
+        height: 400px;
+        margin-left: 10%;
+        margin-top: 2.5rem;
+        cursor: pointer;
+    }
+    .product:hover .product-name{
+        color: #FF9966;
+    }
+    .imgOfProduct{
+        width: 100%;
+        height: 80%;
+        background-color: #F7F7F9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .singleProduct{
+        height: 70%;
+    }
+    .overWidth{
+        width: 75%;
+    }
+    .product-name{
+        font-weight: 400;
+        font-size: 0.6rem;
+        line-height: 18px;
+        letter-spacing: 0.75px;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .star{
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+    
+    .price{
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+    .viewAllProduct{
+        margin-top: 3rem;
+        width: 30%;
+        height: 2rem;
+        background-color: #FF9966;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-left: 35%;
+        margin-bottom: 3rem;
+        font-size: 0.7rem;
+    }
+    .testimonials{
+        width: 100%;
+        height:  auto;
+        background-color: #F7F7F9;
+        padding-top: 2rem;
+    }
+    .t-head{
+        
+        font-weight : 400;
+        font-size : 15px;
+        text-align: center;
+    }
+    .t-box{
+        /* border: 1px solid red; */
+        width: 90%;
+        margin-left: 10%;
+        display: block;
+    }
+    .t-body{
+        /* border: 1px solid black; */
+        height: 100%; 
+        width: 35%;  
+        float: left; 
+        margin-right: 15%;
+        height: auto;
+        margin-top: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .t-image-box{
+        width : 100%;
+        height: 52%;
+    }
+    .t-image{
+        width : 100%
+    }
+    .t-heading{
+        margin-top: 1rem;
+        letter-spacing: 0.7px;
+        font-size: .8rem;
+        margin-left: 0.8rem;
+    }
+    .t-content{
+        margin-left: 0.8rem;
+        font-size: 0.6rem;
+        margin-top: 1rem;
+        letter-spacing: 0.5px;
+    }
+    .readmore{
+        margin-left: 0.8rem;
+        display: inline-block;
+        margin-top: 0.5rem;
+        font-size: 0.6rem;
+        color: black;
+        margin-bottom: 0.6rem;
+    }
+    .viewAllButton{
+        margin-top: 3rem;
+        width: 30%;
+        height: 2rem;
+        background-color: #FF9966;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-left: 35%;
+        margin-bottom: 3rem;
+        font-size: 0.7rem;
+    }
+    .insta-content{
+        width: 100%;
+        height: 57rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+       
+    
+    }
+    .insta-content p:nth-child(1){
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 15px;
+        letter-spacing: 0.5px;
+    }
+    .insta-content p:nth-child(2){
+        margin-top: 2rem;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 15px;
+        letter-spacing: 0.7px;
+    }
+    .i-products{
+        width : 85%;
+        height: 420px;
+        margin-top: 2rem;
+    }
+    .i-product-box{
+        width : 28%;
+        float : left;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        background-color: #F7F7F9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* border: 1px solid red; */
+
+    }
+    .i-product-box:hover .overlay{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .overlay{
+        display: none;
+        width: 100%;
+        height : 100%;
+        position: absolute;
+        background-color: black;
+        opacity: 0.33;
+    }
+    .i-product-image{
+        width: 30%;
+    }
+    .i-product-photo{
+        width: 70%;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .image{
+        height: 90vh;
+        position: absolute;
+        top : 2rem;
+       
+    }
+    
+    .image::before {
+        content: ""; /* Adds a pseudo-element */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.0001), rgba(0, 0, 0, 0.0001)),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.65) 100%);    
+        z-index: 1; /* Ensures the gradient is behind the image */
+    }
+    .image img{
+        /* object-fit: cover; */
+        /* height: 100%; */
+        width: 100%;
+        /* clip-path: inset(0 50% 0 0); */
+    }
+    .text {
+        position: absolute;
+        width: 100%;
+        top: 55%;
+        left: 1%;
+        padding: 20px;
+        color: white;
+        z-index: 1;
+
+    }
+    .text p{
+        margin-top: 1rem;
+       
+    }
+    .text p:nth-child(1){
+        font-size: 0.8rem;
+        font-weight:lighter;
+        letter-spacing: 1.5px;
+    }
+    .text p:nth-child(2){
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .text p:nth-child(3){
+        font-size: 0.8rem;
+        letter-spacing: 1.1px;
+    }
+    .row{
+        width: 100%;
+        margin-top: 27rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        width: 100%;
+        height: auto;
+        background-color:#F7F7F9;
+        margin-left: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .order2{
+        order: 2;
+    }
+    .order4{
+        order: 4;
+    }
+    .content p:nth-child(1){
+        margin-top: 1rem;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 15px;
+       
+        
+    }
+    .content p:nth-child(2){
+        font-weight: 400;
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
+        line-height: 32px;
+        letter-spacing: 1px;
+    }
+    .content p:nth-child(3){
+        margin-top: 0.7rem;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 18px;
+        letter-spacing: 0.5px;
+    }
+    .img{
+        width : 100%;
+        overflow: hidden;
+        height: 100%;
+        margin-left: 0;
+        order: 1;
+    } 
+    .img img{
+        width: 100%;
+       
+        /* transform: scale(1.2); */
+    }
+    .img2{
+        width : 100%;
+        height: auto;
+        overflow: hidden;
+        margin-left: 0;
+        order: 3;
+    }
+    .img2 img{
+        width: 90%;
+        /* object-fit: cover; */
+        transform: scale(1.2); 
+    }
+    .btn{
+        width: 8rem;
+        height: 2.2rem;
+        border: none;
+        background-color: #FF9966;
+        color: white;
+        margin-top: 2rem;
+        margin-bottom: 0.8rem;
+        /* z-index: 1; */
+    }
+    .row-products{
+        padding-top: 3rem;
+        margin-top: 0rem;
+        width: 100%;
+    }
+    .product{
+        width : 70%;
+        float : left;
+        height: 430px;
+        margin-left: 15%;
+        margin-top: 2.5rem;
+        cursor: pointer;
+    }
+    .product:hover .product-name{
+        color: #FF9966;
+    }
+    .imgOfProduct{
+        width: 100%;
+        height: 80%;
+        background-color: #F7F7F9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .singleProduct{
+        height: 70%;
+    }
+    .overWidth{
+        width: 75%;
+    }
+    .product-name{
+        font-weight: 400;
+        font-size: 0.6rem;
+        line-height: 18px;
+        letter-spacing: 0.75px;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .star{
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+    
+    .price{
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+    .viewAllProduct{
+        margin-top: 3rem;
+        width: 40%;
+        height: 2rem;
+        background-color: #FF9966;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-left: 31%;
+        margin-bottom: 3rem;
+        font-size: 0.7rem;
+    }
+    .testimonials{
+        width: 100%;
+        height:  auto;
+        background-color: #F7F7F9;
+        padding-top: 2rem;
+    }
+    .t-head{
+        
+        font-weight : 400;
+        font-size : 17px;
+        text-align: center;
+    }
+    .testimonials p:nth-child(2){
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .t-box{
+        /* border: 1px solid red; */
+        width: 90%;
+        margin-left: 10%;
+        
+    }
+    .t-body{
+        /* border: 1px solid black; */
+        height: 100%; 
+        width: 70%;  
+        float: left; 
+        margin-left: 10%;
+        height: auto;
+        margin-top: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .t-image-box{
+        width : 100%;
+        height: 52%;
+    }
+    .t-image{
+        width : 100%
+    }
+    .t-heading{
+        margin-top: 1rem;
+        letter-spacing: 2px;
+        font-size: 1rem !important;
+        text-align: center;
+    }
+    .t-content{
+        font-size: 0.8rem;
+        margin-top: 1.2rem;
+        letter-spacing: 1px;
+        line-height: 18px;
+        text-align: center;
+    }
+    .readmore{
+        margin-left: 0.8rem;
+        display: inline-block;
+        margin-top: 1.3rem;
+        font-size: 1rem;
+        color: black;
+        margin-bottom: 0.6rem;
+    }
+    .viewAllButton{
+        margin-top: 3rem;
+        width: 40%;
+        height: 2rem;
+        background-color: #FF9966;
+        color: white;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        margin-left: 31%;
+        margin-bottom: 3rem;
+        font-size: 0.7rem;
+    }
+    .insta-content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+    .insta-content p:nth-child(1){
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 15px;
+        letter-spacing: 0.5px;
+    }
+    .insta-content p:nth-child(2){
+        margin-top: 2rem;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 15px;
+        letter-spacing: 0.7px;
+    }
+    .i-products{
+        width : 85%;
+        height: auto;
+        margin-top: 2rem;
+    }
+    .i-product-box{
+        width : 42%;
+        float : left;
+        height: 10rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        background-color: #F7F7F9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-bottom: 3rem;
+
+    }
+    .i-product-box:hover .overlay{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .overlay{
+        display: none;
+        width: 100%;
+        height : 100%;
+        position: absolute;
+        background-color: black;
+        opacity: 0.33;
+    }
+    .i-product-image{
+        width: 23%;
+    }
+    .i-product-photo{
+        width: 70%;
+    }
+  }

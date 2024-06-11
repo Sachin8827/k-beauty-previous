@@ -1,6 +1,9 @@
+import { useLocation } from 'react-router-dom';
 import '../../assets/Css/Header.css'
 import logo from '../../assets/images/79abacfe7487bea00e2b56129976d472.png'
-function Header(){
+function Header({className}){
+  const location = useLocation()
+  console.log(location.pathname)
     return <>
         
         <div className='brand-content'>
@@ -16,14 +19,14 @@ function Header(){
         </div>
         <div className='categories'>
           <div className='option'>
-            <p className='hoverOnCategory'>SHOP ALL</p>
-            <p className='hoverOnCategory'>NEW</p>
-            <p className='hoverOnCategory'>BRANDS</p>
-            <p className='hoverOnCategory'>VALUE SETS</p>
-            <p className='hoverOnCategory'>BLOG</p>
+            <p className={location.pathname=='/' ? "hoverForCategory " : "hoverOnCategory"}>SHOP ALL</p>
+            <p className={location.pathname=='/' ? "hoverForCategory " : "hoverOnCategory"}>NEW</p>
+            <p className={location.pathname=='/' ? "hoverForCategory " : "hoverOnCategory"}>BRANDS</p>
+            <p className={location.pathname=='/' ? "hoverForCategory " : "hoverOnCategory"}>VALUE SETS</p>
+            <p className={location.pathname=='/' ? "hoverForCategory " : "hoverOnCategory"}>BLOG</p>
           </div>
         </div>
-        <hr style={{position: "relative",zIndex : "1", color : '#E2E2E2'}}/>
+        <hr className={location.pathname=='/' ? "forHome" : "forLogin"}/>
     </>
 }
 export default Header;

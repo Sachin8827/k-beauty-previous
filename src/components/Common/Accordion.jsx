@@ -36,7 +36,7 @@ function Accordion({ accordionData }) {
           <hr
             style={{
               marginTop: "0.9rem",
-              color: "#E2E2E2",
+              border: "1px solid #E2E2E2"
             }}
           />
         </div>

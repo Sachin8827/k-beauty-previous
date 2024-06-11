@@ -49,13 +49,13 @@ function LoginForm({handleSubmit, navigate}){
                   disabled={isSubmitting}
                   className='submitButton'
                 >
-                  SUBMIT
+                  LOGIN
                 </button>
               </Form>
             )}
           </Formik>
-          <p style={{cursor : 'pointer'}}>
-            Don't have an account? <a onClick={() => navigate('/signup')}>Create one</a>
+          <p style={{letterSpacing : '1px', fontSize: "13px"}}>
+            Don't have an account? <a onClick={() => navigate('/signup')} style={{textDecoration : 'underline', cursor: 'pointer'}}>Create one</a>
           </p>
         </div>
 
